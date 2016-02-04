@@ -15,6 +15,6 @@ jobs:
         platform: linux
         image: "docker:///ubuntu"
         run:
-          path: echo
-          args: ["Hello, world, git changed"]
+          path: cat
+          args: ["README.md"]
   
