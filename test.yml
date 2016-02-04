@@ -16,11 +16,5 @@ jobs:
         image: "docker:///ubuntu"
         run:
           path: echo
-          args: ["Hello, world 1!"]
-    - task: say-hello2
-      config:
-        platform: linux
-        image: "docker:///ubuntu"
-        run:
-          path: echo
-          args: ["Hello, world 2!"]
+          args: ["Hello, world, git changed"]
+  
