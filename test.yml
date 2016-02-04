@@ -1,7 +1,6 @@
 resources:
   - name: my-product
     type: git
-    trigger: true
     source:
       uri: https://github.com/ihassin/concourse.git
       branch: master
@@ -9,6 +8,8 @@ resources:
 jobs:
   - name: hello-world
     plan:
+    - get: my-product
+      trigger: true
     - task: say-hello1
       config:
         platform: linux
