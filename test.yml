@@ -12,6 +12,8 @@ jobs:
       trigger: true
     - task: say-hello1
       config:
+        # inputs:
+        # - name: my-product
         platform: linux
         image: "docker:///ubuntu"
         run:
