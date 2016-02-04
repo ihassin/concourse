@@ -1,0 +1,25 @@
+resources:
+  - name: my-product
+    type: git
+    trigger: true
+    source:
+      uri: https://github.com/ihassin/concourse.git
+      branch: master
+
+jobs:
+  - name: hello-world
+    plan:
+    - task: say-hello1
+      config:
+        platform: linux
+        image: "docker:///ubuntu"
+        run:
+          path: echo
+          args: ["Hello, world 1!"]
+    - task: say-hello2
+      config:
+        platform: linux
+        image: "docker:///ubuntu"
+        run:
+          path: echo
+          args: ["Hello, world 2!"]
