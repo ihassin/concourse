@@ -16,5 +16,5 @@ jobs:
         image: "docker:///ubuntu"
         run:
           path: cat
-          args: ["README.md"]
+          args: ["my-product/README.md"]
   
